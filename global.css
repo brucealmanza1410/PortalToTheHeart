@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,a{
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header_logo{
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.nav_parent{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    margin: auto;
+    padding: 0 80px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu_container{
+    display: flex;
+    gap: 20px;
+}
+
+/*Cambio de idioma*/
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio entre los botones */
+}
+
+.menu_button {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 3px solid rgba(13, 13, 13, 0.798);
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu_button img {
+    width: 22px;
+    height: 22px;
+    margin-left: 8px; /* Cambiamos de margin-right a margin-left */
+}
+
+.menu_button:hover {
+    background-color: rgba(13, 13, 13, 0.94);
+    color: #ffffff;
+    transition: 0.6s;
+}
+
+.menu_button.active {
+    background-color: rgba(13, 13, 13, 0.94);
+    color: #ffffff;
+    
+}
+
+.menu_button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    padding: 5px;
+    background-color: rgba(13, 13, 13, 0.94);
+    border-radius: 8px;
+}
+
+.nav_list{
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.nav_link{
+    color: rgba(188, 188, 188, 0.868);
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px; /* Cambié el tamaño de la fuente aquí */
+}
+
+.nav_link:hover{
+   color: rgb(255, 255, 255);
+}
+
+.nav_link::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0; 
+    bottom: 0; 
+    width: 0; 
+    background-color: rgb(255, 43, 43);
+    transition: width .4s;
+    border-radius: 6px;
+}
+
+.nav_link:hover::after{
+    width: 100%;
+}
+
+/* HAMBURGER ICON */
+.hamburger_icon {
+    display: none; /* Oculto por defecto, visible solo en móviles */
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1001; /* Asegura que esté por encima del menú */
+    position: relative; /* Para que funcione el z-index */
+}
+
+.hamburger_icon span {
+    width: 28px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cambios cuando el menú está activo */
+.hamburger_icon.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger_icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_icon.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav_links.active {
+    top: 0;
+    opacity: 0; /* Empieza invisible */
+    animation: fadeIn 0.5s forwards; /* Animación para que aparezca suavemente */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Clase para bloquear el scroll */
+.no-scroll {
+    overflow: hidden; /* Bloquea el scroll */
+}
+
+/* Estilos generales del footer */
+.footer {
+    background-color: rgb(18, 18, 18);
+    padding: 20px;
+    text-align: center; /* Centra todo el contenido del footer */
+}
+
+/* Contenedor del footer */
+.footer_container {
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: auto; /* Centra el contenedor */
+}
+
+/* Títulos del footer */
+.footer_subtitle {
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #f4f4f4;
+    font-weight: 600;
+}
+
+/* Secciones dentro del footer */
+.footer_sections {
+    display: flex; /* Usa flexbox para organizar las secciones */
+    justify-content: space-around; /* Espacia las secciones */
+    flex-wrap: wrap; /* Permite que las secciones se apilen en pantallas pequeñas */
+    border-top: 1.2px solid rgb(237, 237, 237);
+    border-bottom: 1.2px solid rgb(237, 237, 237);
+    gap: 40px;
+}
+
+/* Cada sección */
+.footer_section {
+    margin: 40px 0;
+    flex: 1; /* Ocupa espacio igual en la fila */
+    min-width: 200px; /* Ancho mínimo para evitar que se vuelva demasiado estrecha */
+    text-align: left; /* Alinea el contenido de la sección a la izquierda */
+}
+
+/* Títulos de las secciones */
+.section_title {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Enlaces en el footer */
+.footer_section a,p{
+    color: #f4f4f4;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 300; /* Cambia el valor según la delgadez deseada */
+}
+
+.footer_section h3{
+    color: #f4f4f4;
+    font-size: 24px;
+}
+
+
+/* Parte inferior del footer */
+.footer_bottom {
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: auto; /* Centra el contenedor */
+    margin-top: 40px; /* Espacio superior */
+    margin-bottom: 20px;
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    color: #f4f4f4; /* Color del texto */
+    display: flex; /* Usa flexbox para alinear el contenido */
+    justify-content: left; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+/* Estilo para el logo */
+.footer_logo {
+    width: 260px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 1px; /* Añade un pequeño margen entre el texto y el logo */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    position: relative;
+    top: -8px;
+}
+
+@media (max-width: 480px) {
+    .footer_sections p {  /* Redimos tamaños de letras del footer*/
+        font-size: 15px;
+    }
+
+    .footer_sections a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 950px) {
+    .menu_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .menu_button{
+        border-color: transparent;
+        color: #ffffff;
+        border-radius: 25px;
+        padding: 6px 10px;
+    }
+
+    .menu_button:hover{
+        background-color: rgb(73, 73, 73);
+    }
+
+    .menu_button.active{
+        background-color: rgb(73, 73, 73);
+    }
+
+    .hamburger_icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav_links {
+        position: fixed;
+        top: -100%; /* Initially hidden */
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: rgb(37, 37, 37);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        z-index: 1000; /* El menú debe tener z-index menor al ícono */
+    }
+
+    /* ACTIVE MENU */
+    .nav_links.active {
+        top: 0;
+    }
+    
+    .nav_link {
+        color: white;
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .nav_parent{     /* Cubrimos todo el nav para mobiles*/
+        width: 100%;
+        height: 72px;
+        padding: 0 25px;
+        background-color: rgb(32, 32, 32);
+        position: fixed; /* Hacemos que el nav sea fijo en la parte superior */
+        top: 0;
+        left: 0;
+        z-index: 999; /* Nos aseguramos de que esté por encima del contenido */
+    }
+
+    body {
+        padding-top: 70px; /* Ajuste para compensar la altura del nav fijo */
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header_logo {
+        font-size: 30px; /* Reducimos el tamaño del logo en móviles */
+    }
+
+    .footer_sections {
+        gap: 20px; /* Reduce el espacio entre las secciones */
+    }
+
+    .footer_section {
+        margin: 20px 0; /* Reduce el margen superior e inferior de cada sección */
+    }
+}

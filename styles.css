@@ -1,0 +1,416 @@
+
+.header_parent{
+    background-image: url(images/Foto_Portada.jpg);
+    background-size: cover; /* Cubre todo el espacio sin importar el tamaño de la pantalla */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 96vh; 
+
+}
+
+/* Sección principal (front_page) */
+.front_page {
+    width: 100%;
+    margin: auto;
+    height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+/* Ajustes para el texto */
+.front_text {
+    margin-top: -60px; /* Ajusta el valor para mover el contenido hacia arriba */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0 80px; /* Un pequeño margen desde el borde izquierdo */
+}
+
+.front_text h2 {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.front_text p {
+    font-size: 28px;
+    color: aliceblue;
+}
+
+/* Icono de la flecha */
+.scroll_icon {
+    width: 50px; /* Tamaño más pequeño */
+    margin: auto;
+    animation: bounce 1.8s infinite; /* Animación de rebote */
+    align-self: center; /* Centra la flecha horizontalmente */
+    margin-top: 50px; /* Espacio adicional entre el texto y la flecha */
+    position: absolute;
+    bottom: 20px; /* Alinea la flecha en la parte inferior */
+}
+
+/* Efecto de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* La flecha sube 20px */
+    }
+}
+
+.container_cards{
+    background-color: #f4f4f4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+     /* Elimina la altura fija */
+     height: auto; /* Esto permite que el contenedor se ajuste a la altura de su contenido */
+     padding: 80px 30px;
+}
+.card_section {
+    margin: 35px;
+    width: 360px;
+    height: 530px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(28, 28, 28, 0.702);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: .5em; /* Espacio para imagen y texto*/
+}
+
+.card_section:hover {
+    transform: scale(1.08); /* Agrega un efecto de hover a la carta */
+}
+
+/* Estilos para la imagen */
+.card_image {
+    width: 100%;
+    height: 55%; /* La imagen ocupa la mayor parte de la carta */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsionarse */
+}
+
+/* Estilos para el contenido de la carta */
+.card_content {
+    padding: 18px;
+    height: 40%; /* El contenido ocupa la parte restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_title{
+    color: rgb(39, 64, 156);
+    font-size: 22px;
+}
+
+.card_description {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.card_button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.card_button:hover {
+    /* background-color: rgb(255, 101, 0); Cambio de color al pasar el mouse sobre el botón */
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.container_button_servicios{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.button_servicios{
+    background-color: rgb(223, 36, 36);
+    color: #fff;
+    padding: 18px 26px;
+    border-radius: 8px;
+    border: 1px solid transparent; /* Aplica un borde transparente por defecto */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+}
+
+.button_servicios:hover{
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    color: black;
+}
+
+/* Estilos para la sección About */
+.container_about {
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    padding-bottom: 10px;
+    background-color: #f4f4f4;
+    margin-top: 100px;
+}
+
+/* Contenedor para alinear los elementos en columna */
+.about_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;  /* Alinea el texto al centro */
+}
+
+/* Título pequeño */
+.small_title {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* Título grande */
+.large_title {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 22px;
+}
+
+/* Párrafo */
+.about_paragraph {
+    font-size: 16px;
+    color: #333;
+    max-width: 600px; /* Limita el ancho del párrafo para que no sea muy ancho en pantallas grandes */
+    margin-bottom: 30px;
+}
+
+/* Botón */
+.about_button {
+    padding: 15px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid transparent; /* Aplica un borde transparente por defecto */
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.about_button:hover {
+    /* background-color: #0056b3;  */
+    background-color: #f4f4f4;
+    color: black;
+    border: 1px solid black; /* Aplica un borde transparente por defecto */
+}
+
+.container_about img{
+    width: 450px;
+    height: 450px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsión */
+    margin-top: 20px;
+}
+
+/* Sección con el efecto parallax */
+.parallax_section {
+    background-image: url('images/Fondo_magico.jpg'); /* Imagen que se irá revelando */
+    background-attachment: fixed; /* Hace que la imagen se quede fija mientras haces scroll */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Hace que la sección ocupe toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Efecto viñeta y oscurecimiento */
+    background-color: rgba(0, 0, 0, 0.394); /* Capa semitransparente negra para oscurecer */
+    background-blend-mode: darken; /* Oscurece la imagen combinando el color y la imagen */
+}
+
+/* Contenedor general para la sección de contacto */
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    margin: auto; /* Centra el contenedor */
+    color: #fff;
+}
+
+/* Texto del contacto */
+.contact_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin-right: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente más sutil */
+    padding: 30px; /* Mayor padding para darle espacio al contenido */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.599); /* Sombra suave para darle elevación */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque detrás del fondo para mayor distinción */
+}
+
+/* Título del contacto */
+.contact_title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff; /* Mantén el texto blanco para que contraste bien */
+}
+
+/* Descripción del contacto */
+.contact_description {
+    font-size: 16px; /* Ajusta ligeramente el tamaño para que sea más legible */
+    margin-bottom: 40px;
+    color: #f1f1f1; /* Un gris claro para un texto menos duro que el blanco */
+}
+
+/* Botón para contactar */
+.contact_button {
+    padding: 15px 30px;
+    background-color: rgb(223, 36, 36);
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    display: flex; /* Asegura que el texto y el ícono estén en línea */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.whatsapp_icon {
+    margin-left: 8px; /* Espacio entre el texto y el ícono */
+    width: 28px; /* Tamaño del ícono */
+    height: 28px; /* Tamaño del ícono */
+}
+
+.contact_button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* Imagen del contacto */
+.contact_image img {
+    max-width: 100%; /* Hace que la imagen nunca exceda el ancho de su contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien sin distorsión */
+    position: relative;
+    transform: translateY(30px); /* Ajusta la imagen hacia abajo */
+}
+
+
+@media (max-width: 480px) {
+    .front_text h2 {
+        font-size: 60px; /* Reduce el tamaño dl título en móviles pequeños */
+        margin-top: 100px; /* Ajusta el margen superior */
+    }
+    .front_text p {
+        font-size: 20px; /* Reduce también el tamaño del párrafo */
+    }
+
+    .front_text {
+        padding: 0 20px; /* Reduce el padding en móviles pequeños */
+    }
+
+}
+
+/* Responsive: Pantallas pequeñas (Tablets y Smartphones) */
+@media (max-width: 768px) {
+
+    .front_text h2 {
+        margin-top: 128px; /*Bajamos en titulo*/
+        font-size: 80px; /* Reducimos el tamaño del título */
+    }
+
+    .front_text p {
+        font-size: 25px; /* Reducimos el tamaño del texto descriptivo */
+    }
+
+    .scroll_icon {
+        width: 35px; /* Reducimos el tamaño del icono */
+        bottom: 10px; /* Ajustamos la posición de la flecha */
+    }
+
+    .card_section {
+        width: 90%; /* Asegura que las cartas ocupen la mayor parte del ancho en móviles */
+        margin: 20px auto; /* Centramos las cartas y ajustamos el margen */
+    }
+
+
+    .card_title{
+        font-size: 18px;
+    }
+
+    .card_description{
+        font-size: 12px;
+    }
+
+    .parallax_section{   /*Parallax se ajusta a los mobiles*/
+        height: auto;
+    }
+
+    .container_about img{ /*Reducimos el tamaño del personaje 3D*/
+        width: 320px;
+        height: 320px;
+    }
+
+    .contact_image img {
+        width: 280px;
+        height: 280px;
+        margin-top: 20px;
+    }
+
+}
+
+/* Ajustes para contact_section (Por imagen) */
+
+@media (max-width: 1050px){
+    .contact_container {
+        flex-direction: column; /* Pone los elementos en columna en lugar de fila */
+        text-align: center;
+    }
+
+    .contact_title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .contact_text {
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .contact_image img {
+        width: 420px;
+        height: 420px;
+        margin-top: 20px;
+    }
+}
+
+
