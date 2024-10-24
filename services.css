@@ -10,7 +10,7 @@
     justify-content: space-between;
     width: 90%;
     height: 380px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 20px 0;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -33,14 +33,15 @@
 }
 
 .service-info h2{
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .service-description {
     margin: 15px 0;
-    line-height: 1.6;
+    line-height: 1.5;
     color: black;
-    margin: 20px 0;
+    margin: 15px 0;
+    font-size: 16px; /* Tamaño de texto moderado */
 }
 
 .service-button {
@@ -52,7 +53,7 @@
     display: inline-block;
     transition: background-color 0.3s ease;
     font-size: 14px;
-    max-width: 190px; /* Establece un ancho máximo para el botón */
+    max-width: 150px; /* Establece un ancho máximo para el botón */
     min-width: 80px;
     
     margin-top: 10px; /* Añade un pequeño margen arriba para separación */
@@ -76,6 +77,30 @@
     object-fit: cover;
 }
 
+@media (max-width: 1244px) {
+    .service-card {
+        height: auto;
+    }
+
+    .service-info {
+        padding: 20px; /* Reducir padding en pantallas medianas */
+    }
+
+    .service-info h2 {
+        font-size: 24px; /* Reducir el tamaño del título */
+    }
+
+    .service-description {
+        font-size: 14px; /* Ajustar el tamaño del texto */
+    }
+
+    .service-button {
+        padding: 8px 16px; /* Ajustar padding del botón */
+        font-size: 12px;
+        max-width: 130px;
+    }
+}
+
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
     .service-card {
@@ -85,8 +110,9 @@
 
     .service-image {
         width: 100%;
-        height: 250px; /* Altura específica para la imagen */
+        max-height: 200px; /* Limitar la altura máxima de la imagen */
         order: -1; /* Coloca la imagen arriba del contenido */
+        overflow: hidden; /* Para ocultar cualquier exceso de la imagen */
     }
 
     .service-info {
@@ -95,7 +121,7 @@
     }
 
     .service-info h2 {
-        font-size: 22px; /* Ajusta el tamaño del título */
+        font-size: 20px; /* Ajusta el tamaño del título */
     }
 
     .service-description {

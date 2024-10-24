@@ -1,6 +1,6 @@
 
 .header_parent{
-    background-image: url(images/Foto_Portada.jpg);
+    background-image: url(images/foto_portada.webp);
     background-size: cover; /* Cubre todo el espacio sin importar el tamaño de la pantalla */
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +22,7 @@
 
 /* Ajustes para el texto */
 .front_text {
-    margin-top: -60px; /* Ajusta el valor para mover el contenido hacia arriba */
+    margin-top: -90px; /* Ajusta el valor para mover el contenido hacia arriba */
     text-align: left; /* Alinea el texto a la izquierda */
     padding: 0 80px; /* Un pequeño margen desde el borde izquierdo */
 }
@@ -343,9 +343,13 @@
 /* Responsive: Pantallas pequeñas (Tablets y Smartphones) */
 @media (max-width: 768px) {
 
+    .front_text{
+        margin-top: -160px;
+    }
+
     .front_text h2 {
         margin-top: 128px; /*Bajamos en titulo*/
-        font-size: 80px; /* Reducimos el tamaño del título */
+        font-size: 60px; /* Reducimos el tamaño del título */
     }
 
     .front_text p {
@@ -354,7 +358,7 @@
 
     .scroll_icon {
         width: 35px; /* Reducimos el tamaño del icono */
-        bottom: 10px; /* Ajustamos la posición de la flecha */
+        bottom: 80px; /* Ajustamos la posición de la flecha */
     }
 
     .card_section {
