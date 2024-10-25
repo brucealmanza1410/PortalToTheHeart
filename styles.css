@@ -358,7 +358,7 @@
 
     .scroll_icon {
         width: 35px; /* Reducimos el tamaño del icono */
-        bottom: 80px; /* Ajustamos la posición de la flecha */
+        bottom: 130px; /* Ajustamos la posición de la flecha */
     }
 
     .card_section {

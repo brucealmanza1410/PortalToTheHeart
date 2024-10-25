@@ -1,10 +1,27 @@
 .about-intro {
     margin-top: 90px;
-    text-align: left; /* Cambiamos la alineación del texto a la izquierda */
-    padding: 2rem 1.5rem; /* Añadimos un poco de padding para dar espacio interno */
+    padding: 2rem 1.5rem;
     background: #f4f4f4;
-    margin-left: 5%; /* Espacio desde el margen izquierdo */
-    max-width: 800px; /* Limitar el ancho máximo para evitar que se expanda en pantallas grandes */
+    margin-left: 5%;
+    max-width: 100%;
+    
+}
+
+.about-intro-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    gap: 1rem; /* Espacio entre la imagen y el texto */
+}
+
+.intro-avatar {
+    width: 380px; /* Tamaño inicial del avatar */
+    height: auto;
+    border-radius: 40%; /* Redondear la imagen para un estilo de avatar */
+}
+
+.intro-text {
+    text-align: left;
+    max-width: 60%; /* Limita el ancho del texto para dar más espacio al avatar */
 }
 
 .about-intro h1 {
@@ -57,7 +74,7 @@
 .about-history {
     padding: 2rem 1rem;
     max-width: 1200px;
-    margin: auto;
+    margin-left: 5%;
 }
 
 .about-history h2 {
@@ -78,14 +95,30 @@
         margin-left: 3%; /* Reducir el margen en pantallas medianas */
         padding: 2rem 1rem; /* Ajustar el padding */
     }
+
+    .intro-avatar {
+        width: 250px; /* Reducir el tamaño del avatar en pantallas medianas */
+    }
 }
 
 @media (max-width: 768px) {
 
+    .about-intro{
+        padding-top: 0px;
+    }
 
-    .about-intro {
-        margin-left: 1rem; /* Disminuir el margen en pantallas más pequeñas */
-        padding: 1rem;
+    .about-intro-content {
+        flex-direction: column; /* Cambia la dirección a columna para pantallas pequeñas */
+    }
+
+    .intro-text {
+        max-width: 100%; /* Deja que el texto ocupe todo el ancho en móviles */
+        margin-left: 3%; /* Mantén un margen izquierdo para que no quede pegado al borde */
+    }
+
+    .intro-avatar {
+        width: 55%; /* Ajusta el ancho de la imagen en pantallas pequeñas */
+        margin: 1rem auto -90px auto; /* Centra la imagen debajo del texto */
     }
 
     .about-intro p{
@@ -102,7 +135,4 @@
         margin-bottom: 1rem;
     }
 
-    .team-member {
-        width: 80%;
-    }
 }
